@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+"""
+This template created for signup an user but having some problem
+this is ignored. And this work is done by create the 'register.html' file.
+Thank's.
+"""
+
+{% extends 'blog_app/base.html' %}
+
+{% block content %}
+    <h1>Sign up</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign up</button>
+    </form>
+{% endblock content %}
